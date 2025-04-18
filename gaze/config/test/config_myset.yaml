@@ -1,0 +1,19 @@
+---
+train:
+  save:
+    metapath: "weight"
+    folder:  "gaze360"
+    model_name: "gaze"
+  device: 0
+
+test:
+  load: { begin_step: 5, end_step: 80, steps: 5 }
+  data:
+    image: "video/input/frames"
+    label: ""
+    name: "frames"
+    header: False
+    isFolder: False
+  savename: "frames_infer"
+  device: 0
+  reader: "frames"
